@@ -1,0 +1,58 @@
+<mat-horizontal-stepper>
+  <mat-step>
+    <ng-template matStepLabel>Sus productos</ng-template>
+    <div *ngIf="(products$ | async) as products">
+      <p *ngIf="products.length === 0">No hay productos</p>
+      <!-- Imagen -->
+      <div class="row center-xs" *ngFor="let product of products">
+        <div class="col-xs-12 col-sm-2 col-md-2 ">
+          <div class="box">
+            <img class="image" [src]="product.image" alt="">
+          </div>
+        </div>
+        <!-- Name Column -->
+        <div class="col-xs-12 col-sm-3 col-md-3 ">
+          <div class="box button" matBadge="4" matBadgeOverlap="false"
+           matBadgeColor="accent">{{ product.title }}
+          <!--[matBadge]="total$ | async"-->
+          </div>
+        </div>
+        <!-- Price Column -->
+        <div class="col-xs-12 col-sm-3 col-md-3 ">
+          <div class="box"> {{ product.price | currency }} </div>
+        </div>
+        <!--
+        <div class="col-xs-12 col-sm-3 col-md-3 ">
+          <div class="box">
+            <button mat-mini-fab color="primary" (click)="addProduct(product)">+</button>
+            <button *ngFor="let product of products; let i=index" mat-mini-fab color="accent" (click)="deleteProduct(i)">-</button>
+          </div>
+          -->
+        <!-- Quantity Column
+        <div class="col-xs-12 col-sm-3 col-md-3 ">
+          <div class="box">
+            <td mat-cell *matCellDef="let product"> {{ProductCart.quantity}} </td>
+          </div>
+        </div>-->
+        <!-- Total Column
+        <div class="col-xs-12 col-sm-3 col-md-3 ">
+          <div class="box">
+            <th mat-header-cell *matHeaderCellDef> Total </th>
+            <td mat-cell *matCellDef="let product"> {{ProductCart.total | currency}} </td>
+          </div>
+        </div>-->
+
+        </div>
+      </div>
+
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Datos Personales</ng-template>
+    <h1>Contenido</h1>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Informacion de pago</ng-template>
+    <h1>Contenido</h1>
+  </mat-step>
+</mat-horizontal-stepper>
+

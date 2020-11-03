@@ -1,0 +1,9 @@
+
+<div class="product-grid ">
+  <!--Componente que se encarga de renderizar un producto, lo envia a product.components.ts y este lo recibe mediante un input  -->
+  <app-product
+    *ngFor="let prod of products"
+    (productClicked)="clickProduct($event)"
+    [product]="prod">
+  </app-product>
+</div>

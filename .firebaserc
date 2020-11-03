@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "platzi-store-eeb36": {
+      "hosting": {
+        "platzi-store": [
+          "platzi-store-eeb36"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "platzi-store-eeb36"
+  }
+}

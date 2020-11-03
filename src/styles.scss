@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estos estilos son globales */
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.product-grid{ //para una cuadricula de productos o listas
+  display: grid;
+  margin: 6px;
+  gap: 6px;
+  justify-items: center;
+  //height: 50%;
+}
+.container{
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .container{
+    max-width: 1110px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+/*
+@media(min-width:768px) {
+  .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(min-width:992px) {
+  .product-grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1000px) {
+  .product-grid {
+      grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media(min-width:1200px) {
+  .product-grid {
+      grid-template-columns: repeat(6, 1fr);
+  }
+}*/
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

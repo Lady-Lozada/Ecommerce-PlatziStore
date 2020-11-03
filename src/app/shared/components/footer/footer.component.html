@@ -1,0 +1,50 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="box">
+          <h3>Productos</h3>
+          <ul>
+            <li>
+              <a routerLink="/products" [queryParams]="{ type: 'news' }"
+                >Nuevos Productos</a
+              >
+            </li>
+            <li>
+              <a routerLink="/products" [queryParams]="{ type: 'offer' }"
+                >En oferta</a
+              >
+            </li>
+            <li>
+              <a routerLink="/products" [queryParams]="{ type: 'latest' }"
+                >Últimos productos</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="box">
+          <h3>Acerca de PlatziStore</h3>
+          <ul>
+            <li><a routerLink="/about-us">Sobre nosotros</a></li>
+            <li><a routerLink="/stores">Nuestras tiendas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="box">
+          <h3>Contacto</h3>
+          <!--<input [formControl]="emailField" type="text">
+          {{ emailField.valid }}, {{ emailField.invalid }}
+          <button *ngIf="emailField.valid" (click)="sendMail()" >Enviar</button>
+          <p *ngIf="emailField.invalid">El campo no es válido</p>-->
+          <mat-form-field color="accent" class="full-width">
+                <input [formControl]="emailField" matInput placeholder="Digíte su correo" type="email">
+              </mat-form-field>
+              <button (click)="sendMail()" [disabled]="emailField.invalid" mat-raised-button color="accent">Suscribirse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

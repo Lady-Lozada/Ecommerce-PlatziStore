@@ -1,0 +1,19 @@
+<div *ngIf="(product$ | async) as product">
+  <div>
+    <img [src]="product.image" alt="">
+  </div>
+  <div>
+    <ul>
+      <li>Nombre: {{ product.title }}</li>
+      <li>Precio: {{ product.price | currency }}</li>
+    </ul>
+    <p>{{ product.description }}</p>
+  </div>
+  <button mat-raised-button color="accent" (click)="createProduct()">Crear producto</button>
+  <button mat-raised-button color="accent" (click)="updateProduct()">Actualizar producto</button>
+  <button mat-raised-button color="accent" (click)="deleteProduct()">Borrar producto</button>
+  <button mat-raised-button color="accent" (click)="getRandomUsers()">Other Api</button>
+  <button mat-raised-button color="accent" (click)="getFile()">get file</button>
+</div>
+
+

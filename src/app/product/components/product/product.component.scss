@@ -1,0 +1,72 @@
+// Esta clase es aplicada unicamente a este componente: product.component
+:host{ //Elemento padre que crea Angular
+  margin: 1px;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 5px; //para que los bordes sean redondos
+  display: block; //para que el ancho y alto sea dinamico respecto al alement
+  padding: 5px;
+}
+
+img{
+  max-width: 100%;
+  width: 200px;
+  height: 170px;
+  overflow: hidden;
+  position: relative;
+}
+
+.favorito{
+  font-size: 35px;
+}
+
+/*
+.product{
+  text-align: center;
+  display: grid;
+  //grid-template-rows: 15% 60% 0.5%;
+}
+
+.product h3{
+  float: left;
+  margin-top: 3px;
+  color: darkblue;
+  height: 3px;
+}
+
+.product strong{
+  text-align: center;
+  height: 1px;
+  margin: -23px;
+  margin-block-end: 10px;
+}
+.product p{
+  text-align: left;
+  height: 0.09px;
+}
+
+.favorito{
+  position: absolute ;
+  width: 15px;
+  height: 15px;
+  border: none;
+  padding: 5px 5px;
+  box-sizing: inherit;
+}
+.favorito:hover{
+  background-color: rgb(248, 248, 71)  ;
+}
+
+.botonCart{
+  background:  url("https://img.icons8.com/wired/24/000000/buy.png") no-repeat center;
+  width: 25px;
+  height: 24px;
+  border: none;
+  padding: 5px 5px;
+  box-sizing: inherit;
+  //position: fixed;
+}
+.botonCart:hover{
+  background-color: rgb(176, 230, 252);
+}
+*/

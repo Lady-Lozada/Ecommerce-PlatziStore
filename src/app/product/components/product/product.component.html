@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ product.title | uppercase }}</mat-card-title>
+    <mat-card-subtitle>{{ product.price | currency}}</mat-card-subtitle>
+  </mat-card-header>
+  <img [src]="product.image" alt="">
+  <mat-card-content>
+    <p>{{ product.description | slice:0:30 }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a class="detalle" [routerLink]="['/products', product.id]" mat-raised-button>Ver detalle</a>
+    <button mat-raised-button color="accent" class="botonCart" (click)="addCart()">Add</button>
+  </mat-card-actions>
+</mat-card>
+
+<!--
+<div class="product">
+  <button  mat-icon-button color="accent" class="favorito" >&#x2661;</button>
+  <h3 appHighlight>{{ product.title | uppercase }}</h3>
+  <img [src]="product.image" alt="">
+  <button mat-raised-button color="accent" class="botonCart" (click)="addCart()">Add</button>  (click) es un ouput
+
+  <strong>{{ product.price | currency}}</strong>  currency:'EUR'--> <!--currency:'€'
+  <a class="detalle" [routerLink]="['/products', product.id]">Ver detalle</a>
+  <p>{{ today | date:'medium'}}</p>
+  <p appHighlight>{{ product.description | slice:0:10 }}</p>
+
+</div>-->
+
+

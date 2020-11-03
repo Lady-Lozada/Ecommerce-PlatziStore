@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="login($event)">
+  <mat-card>
+    <mat-toolbar color="primary">
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+    </mat-toolbar>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input placeholder="Id" formControlName="email" matInput type="email">
+          </mat-form-field>
+          <!--
+          <div *ngIf="priceField.errors && priceField.dirty">
+            <mat-error *ngIf="priceField.hasError('price_invalid')">Esto no es válido</mat-error>
+            <mat-error *ngIf="priceField.hasError('required')">El campo es requerido</mat-error>
+          </div>
+          -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input placeholder="Password" formControlName="password" matInput type="text">
+          </mat-form-field>
+          <!--
+          <div *ngIf="priceField.errors && priceField.dirty">
+            <mat-error *ngIf="priceField.hasError('price_invalid')">Esto no es válido</mat-error>
+            <mat-error *ngIf="priceField.hasError('required')">El campo es requerido</mat-error>
+          </div>
+          -->
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]="form.invalid"  mat-raised-button color="accent"
+        type="submit" >Ingresar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
